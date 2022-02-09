@@ -1,0 +1,24 @@
+html 
+    head 
+        title Restaurant Adder 
+
+    body 
+        include ./header
+        
+        p 
+            | Restaurant Name:
+            input(type='text', id ='restaurantName')
+            br
+            br
+            | Delivery Fee: 
+            input(type='text', id ='deliveryfee')
+            br
+            br
+            | Minimum Order:
+            input(type='text' id ='minimumorder')
+            br
+            br
+            button(type='button' onclick='createRestaurant()') Submit
+            //- - let obj = {"name":,"delivery_fee": "deliveryfee","minimumorder": "minmumorder"}
+            //- script!= `const x = ${JSON.stringify(obj)};`
+            script(src="/js/client.js") 

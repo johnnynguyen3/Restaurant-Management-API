@@ -1,0 +1,66 @@
+html 
+    head 
+        title Restaurant Adder 
+    body 
+        include ./header 
+        //- include ../public/restaurantID.html
+        h2  Restaurant ID: #{rest.id}
+
+        h2  Restaurant Name: #{rest.name}
+
+        h2  Delivery Fee: #{rest.delivery_fee} 
+        
+        h2  Minimum Order: #{rest.minimum_order}
+
+
+        br
+        br
+
+        h2 Add Categories 
+        br
+        br
+        | Category Name:
+        input(type='text' id='textfield')
+        br
+        br
+        button(type='button' id='please work' onclick="createCategory()") Add Category
+
+        br
+
+
+        h2 Add Item:
+        br
+        | Select Category 
+        select(id='select')
+        br
+        br
+        | Item Name: 
+        input(type='text' id='itemname')
+        br
+        br
+        | Item Description: 
+        input(type='text' id='itemdesc')
+        br
+        br
+        | Item Price 
+        input(type='text' id='itemprice')
+        br
+        br
+        button(type='button' id='button' onclick="createItem()") Add Item
+
+        
+        br
+
+        div(id='menu')
+            h2 Menu: 
+        each j, k in rest.menu
+            h3 #{k}
+            each item in j
+                p Name :  #{item.name}
+                p Description : #{item.description}
+                p Price : #{item.price}
+        br
+        button(type='button' id='sendData' onclick='sendToServer()') Save Restaurant
+        script(src="/js/client.js") 
+
+

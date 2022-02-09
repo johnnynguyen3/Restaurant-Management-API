@@ -1,0 +1,14 @@
+html 
+    head 
+        title Restaurants 
+
+    body 
+
+        include ./header 
+
+        h1  All Restaurants:
+
+        each rest in list 
+            a(href=`http://127.0.0.1:3000/restaurants/${rest.id}`)=rest.name
+            br 
+        
