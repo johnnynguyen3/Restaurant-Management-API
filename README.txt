@@ -1,6 +1,7 @@
 Developer/Author: Johnny Nguyen
 Date: Feburary 9, 2022
 
+Important: In order to run this programm, you must have working knowledge of MongoDB (No-SQL database) and MongoD running.
 
 To Run:
 1. Unzip the folder.
